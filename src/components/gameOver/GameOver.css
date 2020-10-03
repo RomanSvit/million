@@ -1,0 +1,82 @@
+.gameover-page {
+  width: 320px;
+  background: #F5F5F7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 103px;
+  padding-bottom: 48px;
+}
+.gameover__img {
+  width: 197px;
+  height: 155px;
+  margin-bottom: 42px;
+}
+.block-gameover {
+  width: 288px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.block-gameover__total {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1c1c21;
+  opacity: 50%;
+  margin-bottom: 8px;
+}
+.block-gameover__earned {
+  font-size: 32px;
+  color: #1c1c21;
+  font-weight: 600;
+  margin-bottom: 102px;
+}
+.block-gameover__btn {
+  width: 288px;
+  padding: 16px 0;
+  border-radius: 8px;
+  background-color: #ff8b37;
+  color: #ffffff;
+  font-size: 14px;
+}
+.block-gameover__btn:hover {
+  background: #ffac70;
+}
+@media (min-width: 1440px) {
+  .gameover-page {
+    width: 1440px;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 222px;
+    padding-bottom: 310px;
+    padding-left: 165px;
+  }
+  .gameover__img {
+    width: 624px;
+    height: 367px;
+    margin: 0;
+  }
+  .block-gameover {
+    width: 624px;
+    align-items: flex-start;
+  }
+  .block-gameover__total {
+    text-align: start;
+    font-size: 37px;
+  }
+  .block-gameover__earned {
+  font-size: 56px;
+  color: #1c1c21;
+  font-weight: 600;
+  margin-bottom: 64px;
+}
+  .block-gameover__btn {
+    width: 248px;
+    padding: 21px 0;
+    border-radius: 12px;
+    background-color: #ff8b37;
+    color: #ffffff;
+    font-size: 20px;
+  }
+}

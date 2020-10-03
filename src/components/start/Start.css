@@ -1,0 +1,88 @@
+.container {
+  width: 320px;
+  padding: 0 16px;
+  height: 100%;
+  margin: 0;
+}
+.start-page {
+  background-color: white;
+  background-image: url(/image/bagstartmob.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 103px;
+  padding-bottom: 48px;
+}
+.start-page__img {
+  width: 197px;
+  height: 155px;
+  margin-bottom: 42px;
+}
+.start-page__img > img {
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+.block-begin {
+  width: 288px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.block-begin__title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 116%;
+  margin-bottom: 102px;
+}
+.block-begin__btn {
+  width: 288px;
+  padding: 16px 0;
+  border-radius: 8px;
+  background-color: #ff8b37;
+  color: #ffffff;
+  font-size: 14px;
+}
+.block-begin__btn:hover {
+  background: #ffac70;
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 1440px;
+  }
+  .start-page {
+    background-image: url(/image/bagstartdesc.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 222px;
+    padding-bottom: 310px;
+  }
+  .start-page__img {
+    width: 624px;
+    height: 367px;
+    margin: 0;
+  }
+  .block-begin {
+    width: 624px;
+    align-items: flex-start;
+  }
+  .block-begin__title {
+    text-align: start;
+    font-size: 56px;
+    margin-bottom: 64px;
+  }
+  .block-begin__btn {
+    width: 248px;
+    padding: 21px 0;
+    border-radius: 12px;
+    background-color: #ff8b37;
+    color: #ffffff;
+    font-size: 20px;
+  }
+}
