@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "question": "Кто из президентов США написал свой собственный рассказ про Шерлока Холмса?",
+    "answers": [
+      { "variant": "A", "answer_text": "Джон Кеннеди" },
+      { "variant": "B", "answer_text": "Франклин Рузвельт" },
+      { "variant": "C", "answer_text": "Рональд Рейган" },
+      { "variant": "D", "answer_text": "Аврам Линкольн" }
+    ],
+    "rigth_answer": "B",
+    "price": 500
+  },
+  {
+    "id": 2,
+    "question": "Какой вид спорта не входит в современное пятиборье?",
+    "answers": [
+      { "variant": "A", "answer_text": "Метание копья" },
+      { "variant": "B", "answer_text": "Верховая езда" },
+      { "variant": "C", "answer_text": "Фехтование" },
+      { "variant": "D", "answer_text": "Плавание" }
+    ],
+    "rigth_answer": "A",
+    "price": 1000
+  },
+  {
+    "id": 3,
+    "question": "Туристы, приезжающие на Майорку, обязаны заплатить налог…",
+    "answers": [
+      { "variant": "A", "answer_text": "На плавки" },
+      { "variant": "B", "answer_text": "На пальмы" },
+      { "variant": "C", "answer_text": "На солнце" },
+      { "variant": "D", "answer_text": "На пляж" }
+    ],
+    "rigth_answer": "C",
+    "price": 2000
+  },
+  {
+    "id": 4,
+    "question": "Что в Российской империи было вещевым эквивалентом денег?",
+    "answers": [
+      { "variant": "A", "answer_text": "Шкуры пушных зверей" },
+      { "variant": "B", "answer_text": "Крупный рогатый скот" },
+      { "variant": "C", "answer_text": "Табак" },
+      { "variant": "D", "answer_text": "Женские серьги" }
+    ],
+    "rigth_answer": "A",
+    "price": 4000
+  },
+  {
+    "id": 5,
+    "question": "У индейцев из немногочисленного североамериканского племени квакиутл есть традиция: беря деньги в долг, они оставляют в залог…",
+    "answers": [
+      { "variant": "A", "answer_text": "Душу" },
+      { "variant": "B", "answer_text": "Имя" },
+      { "variant": "C", "answer_text": "Скальп тещи" },
+      { "variant": "D", "answer_text": "Амулет" }
+    ],
+    "rigth_answer": "B",
+    "price": 8000
+  },
+  {
+    "id": 6,
+    "question": "Как иначе называют пиратский флаг?",
+    "answers": [
+      { "variant": "A", "answer_text": "Весёлый Роджер" },
+      { "variant": "B", "answer_text": "Грязный Гарри" },
+      { "variant": "C", "answer_text": "Бедный Йорик" },
+      { "variant": "D", "answer_text": "Лимонадный Джо" }
+    ],
+    "rigth_answer": "A",
+    "price": 16000
+  },
+  {
+    "id": 7,
+    "question": "Как называется одно из блюд?", 
+    "answers": [
+      { "variant": "A", "answer_text": "Каша по-генеральски" },
+      { "variant": "B", "answer_text": "Картошка по-мундирски" },
+      { "variant": "C", "answer_text": "Макароны по-флотски" },
+      { "variant": "D", "answer_text": "Селёдка от-кутюр" }
+    ],
+    "rigth_answer": "C",
+    "price": 32000
+  },
+  {
+    "id": 8,
+    "question": "Морской путь в какую страну искала экспедиция Колумба, доплыв вместо этого до Америки?",
+    "answers": [
+      { "variant": "A", "answer_text": "Эфиопия" },
+      { "variant": "B", "answer_text": "Япония" },
+      { "variant": "C", "answer_text": "Индия" },
+      { "variant": "D", "answer_text": "Китай" }
+    ],
+    "rigth_answer": "C",
+    "price": 64000
+  },
+  {
+    "id": 9,
+    "question": "Как называется один из х/ф с участием Михаила Боярского?",
+    "answers": [
+      { "variant": "A", "answer_text": "Петух на крыше" },
+      { "variant": "B", "answer_text": "Собака на сене" },
+      { "variant": "C", "answer_text": "Барашек на вертеле" },
+      { "variant": "D", "answer_text": "Д’Артаньян в России" }
+    ],
+    "rigth_answer": "B",
+    "price": 125000
+  },
+  {
+    "id": 10,
+    "question": "Что, согласно известному выражению, должен сделать последовательный человек, сказавший «А»?",
+    "answers": [
+      { "variant": "A", "answer_text": "Дождаться ответа" },
+      { "variant": "B", "answer_text": "Сказать «б»" },
+      { "variant": "C", "answer_text": "Оценить «я»" },
+      { "variant": "D", "answer_text": "Задать вопрос" }
+    ],
+    "rigth_answer": "B",
+    "price": 250000
+  },
+  {
+    "id": 11,
+    "question": "Какое государство ежегодно дарит Лондону ёлку для Трафальгарской площади?",
+    "answers": [
+      { "variant": "A", "answer_text": "Норвегия" },
+      { "variant": "B", "answer_text": "Финляндия" },
+      { "variant": "C", "answer_text": " Дания" },
+      { "variant": "D", "answer_text": "Швеция" }
+    ],
+    "rigth_answer": "A",
+    "price": 500000
+  },
+  {
+    "id": 12,
+    "question": "На самолёте какого авиаконструктора экипаж Валерия Чкалова совершил первый беспосадочный перелёт из СССР в США?",
+    "answers": [
+      { "variant": "A", "answer_text": "Ильюшина" },
+      { "variant": "B", "answer_text": "Антонова" },
+      { "variant": "C", "answer_text": "Яковлева" },
+      { "variant": "D", "answer_text": "Туполева" }
+    ],
+    "rigth_answer": "D",
+    "price": 1000000
+  }
+]

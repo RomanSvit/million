@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./GameOver.css";
+import { priceContext } from "../../context/priceContext";
+import { useHistory } from "react-router-dom";
 
 const GameOver = () => {
+  const { prices, setWinPrice } = useContext(priceContext);
+  let history = useHistory();
+  const handleClick = () => {
+    setWinPrice(0);
+    history.push("/game");
+  };
+
   return (
     <div className="container ">
       <div className="gameover-page">
@@ -10,8 +19,10 @@ const GameOver = () => {
         </div>
         <div className="block-gameover">
           <span className="block-gameover__total">Total score:</span>
-          <span className="block-gameover__earned">$8,000 earned</span>
-          <button className="block-gameover__btn">Try again</button>
+          <span className="block-gameover__earned">${prices} earned</span>
+          <button className="block-gameover__btn" onClick={handleClick}>
+            Try again
+          </button>
         </div>
       </div>
     </div>
