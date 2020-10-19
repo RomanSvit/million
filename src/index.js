@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./components/app/App";
 import { BrowserRouter } from "react-router-dom";
-import { PriceContextProvider } from "./context/priceContext";
+import { PriceContextProvider } from "./context/context";
 
 ReactDOM.render(
   <PriceContextProvider>

@@ -12,7 +12,7 @@ const Start = () => {
     <div className="container ">
       <div className="start-page">
         <div className="start-page__img">
-          <img src="/image/Group 265.png" alt="img" />
+          <img src="/image/logo.png" alt="img" />
         </div>
         <div className="block-begin">
           <h1 className="block-begin__title">Who wants to be a millionaire?</h1>

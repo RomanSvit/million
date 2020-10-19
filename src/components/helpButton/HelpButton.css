@@ -1,0 +1,25 @@
+.block-button{
+    padding: 20px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.btn{
+    background: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.btn-half{
+    width: 106px;
+    height: 65px;
+    background-image: url(/image/50-50.png);
+}
+.btn-helpGroup{
+    width: 103px;
+    height: 65px;
+    background-image: url(/image/help_group.png);
+}
+@media (min-width: 800px){}
+@media (min-width: 1024px) {}
+@media (min-width: 1440px) {}

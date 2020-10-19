@@ -1,28 +1,28 @@
-import React from 'react';
+// import React, {useEffect, useState} from 'react';
 // import Gain from '../gain/Gain';
 // import Game from '../game/Game';
 
 
 
- const BeginGame = () => {
+//  const BeginGame = () => {
 
 // const [isLaptop, setIslaptop] = useState(false);
 
+// const curentWidth = window.outerWidth;
 // useEffect(() => {
-//   const curentWidth = window.outerWidth;
 //   if (curentWidth > 1440) {
 //     setIslaptop(true);
 //   }
-// }, [ isLaptop]);
+// }, [curentWidth]);
 
 
 
-     return (
-       <>
-         {/* <Game /> */}
-         {/* {isLaptop && <Gain />} */}
-       </>
-     );
- }
+//      return (
+//        <>
+//          <Game /> 
+//           {isLaptop && <Gain />}
+//        </>
+//      );
+//  }
  
- export default BeginGame;
+//  export default BeginGame;

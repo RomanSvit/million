@@ -8,11 +8,14 @@ import { Route, Switch } from "react-router-dom";
 
 const App = () => {
   return (
-    <Switch>
-      <Route path="/" exact component={Start} />
-      <Route path="/game" component={Game} />
-      <Route path="/gameover" component={GameOver} />
-    </Switch>
+    <>
+      {/* <BeginGame /> */}
+      <Switch>
+        <Route path="/" exact component={Start} />
+        <Route path="/game" component={Game} />
+        <Route path="/gameover" component={GameOver} />
+      </Switch>
+    </>
   );
 };
 

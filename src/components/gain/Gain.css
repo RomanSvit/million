@@ -1,14 +1,30 @@
-.block-gain {
+.container {
   width: 320px;
-  padding: 21px 0 32px 0;
+  
+}
+.block-gain {
+  background: url(/image/phone_milion.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px 10px;
 }
+
 .gain {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.btn-close {
+  align-self: flex-end;
+  width: 14px;
+  height: 14px;
+  background-image: url(/image/close.png);
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
 }
 .gain-item {
   display: flex;
@@ -25,13 +41,14 @@
 .gain-item p {
   position: absolute;
   z-index: 0;
+  color: aliceblue;
 }
 .svg-gain {
   position: absolute;
   left: 0;
   width: 240px;
   height: 32px;
-  fill: white;
+  fill: #3f51b51a;
   stroke: #d0d0d8;
   z-index: 0;
 }
@@ -65,16 +82,47 @@ span {
   left: 0;
   width: 240px;
   height: 32px;
-  fill: white;
-  stroke: #ff8b37;
+  stroke: #af37da;
+  fill: rgb(129 91 238 / 27%);
   z-index: 0;
 }
 .gain-item:hover:before,
 .gain-item:hover:after {
-  background: #ff8b37;
+  background: #c334e7;
 }
 @media (min-width: 1440px) {
-  .container {
-    width: 376px;
+  .block-gain {
+    width: 500px;
+    margin: 0 auto;
+  }
+  .slideInRight {
+    -webkit-animation-name: slideInRight;
+    animation-name: slideInRight;
+    -webkit-animation-duration: 1s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  @-webkit-keyframes slideInRight {
+    0% {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+      visibility: visible;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideInRight {
+    0% {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+      visibility: visible;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
   }
 }

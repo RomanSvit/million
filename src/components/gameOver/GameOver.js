@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./GameOver.css";
-import { priceContext } from "../../context/priceContext";
+import { priceContext } from "../../context/context";
 import { useHistory } from "react-router-dom";
 
 const GameOver = () => {
