@@ -1,11 +1,11 @@
 import React from "react";
 import "./Gain.css";
-// import shortid from "shortid";
 import data from "../../data.json";
 import HelpButton from "../helpButton/HelpButton";
 
 const Gain = (props) => {
-
+const { onhandleGroupeHelp, onHandleHalf } = props;
+// console.log(props);
   const arr = [...[], ...data];
   return (
     <div className="container">
@@ -36,9 +36,12 @@ const Gain = (props) => {
               </li>
             ))}
         </ul>
-        <HelpButton />
+        <HelpButton
+          onHandleGroupeHelp={onhandleGroupeHelp}
+          onHandleHalf={onHandleHalf}
+        />
       </div>
-      </div>
+    </div>
   );
 };
 

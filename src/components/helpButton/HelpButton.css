@@ -9,11 +9,34 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 .btn-half{
     width: 106px;
     height: 65px;
     background-image: url(/image/50-50.png);
+}
+.btn:hover{
+    transform: scale(1.2);
+}
+.completed.btn::after,
+.completed.btn::before{
+    content: '';
+    display: block;
+    background: red;
+    width: 96px;
+    height: 5px;
+    position: absolute;
+}
+.completed.btn::after{
+    bottom: 28px;
+    transform: rotateZ(15deg);
+    left: 4px;
+}
+.completed.btn::before{
+    bottom: 28px;
+    transform: rotateZ(-15deg);
+    right: 4px;
 }
 .btn-helpGroup{
     width: 103px;

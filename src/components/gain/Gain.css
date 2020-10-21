@@ -1,6 +1,5 @@
 .container {
   width: 320px;
-  
 }
 .block-gain {
   background: url(/image/phone_milion.jpg);
@@ -90,16 +89,24 @@ span {
 .gain-item:hover:after {
   background: #c334e7;
 }
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
+  .container {
+    width: 740px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    width: 320px;
+  }
   .block-gain {
-    width: 500px;
-    margin: 0 auto;
+    width: 320px;
+    opacity: 0.8;
   }
   .slideInRight {
     -webkit-animation-name: slideInRight;
     animation-name: slideInRight;
     -webkit-animation-duration: 1s;
-    animation-duration: 3s;
+    animation-duration: 2s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
   }
@@ -124,5 +131,12 @@ span {
       -webkit-transform: translateX(0);
       transform: translateX(0);
     }
+  }
+}
+@media (min-width: 1440px) {
+  .block-gain {
+    width: 500px;
+    margin: 0 auto;
+    opacity: 1;
   }
 }

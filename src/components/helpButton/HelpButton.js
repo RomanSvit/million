@@ -1,11 +1,18 @@
 import React from "react";
 import "./HelpButton.css";
 
-const HelpButton = () => {
+const HelpButton = (props) => {
+ 
   return (
     <div className="block-button">
-      <button className="btn-half btn"></button>
-      <button className="btn-helpGroup btn"></button>
+      <button
+        className="btn-half btn "
+        onClick={props.onHandleHalf}
+      ></button>
+      <button
+        className="btn-helpGroup btn completed"
+        onClick={props.onHandleGroupeHelp}
+      ></button>
     </div>
   );
 };

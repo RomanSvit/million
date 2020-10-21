@@ -1,6 +1,9 @@
-.gameover-page {
+.container {
   width: 320px;
-  background: #F5F5F7;
+}
+.gameover-page {
+  background-image: url(/image/phone_milion.jpg);
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,19 +25,19 @@
 .block-gameover__total {
   font-size: 18px;
   font-weight: 600;
-  color: #1c1c21;
+  color: #ffffff;
   opacity: 50%;
   margin-bottom: 8px;
 }
 .block-gameover__earned {
   font-size: 32px;
-  color: #1c1c21;
+  color:#ffffff;
   font-weight: 600;
   margin-bottom: 102px;
 }
 .block-gameover__btn {
-  width: 288px;
-  padding: 16px 0;
+  width: 200px;
+  padding: 10px 0;
   border-radius: 8px;
   background-color: #ff8b37;
   color: #ffffff;
@@ -66,11 +69,11 @@
     font-size: 37px;
   }
   .block-gameover__earned {
-  font-size: 56px;
-  color: #1c1c21;
-  font-weight: 600;
-  margin-bottom: 64px;
-}
+    font-size: 56px;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 64px;
+  }
   .block-gameover__btn {
     width: 248px;
     padding: 21px 0;

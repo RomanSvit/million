@@ -6,6 +6,7 @@ import listQuestions from "../../data.json";
 import shortid from "shortid";
 import { priceContext } from "../../context/context";
 import { useHistory } from "react-router-dom";
+import ChartAnswer from "../chartAnswer/ChartAnswer";
 
 const Game = () => {
   const [curentQuestion, setCurentQuestion] = useState(0);
@@ -15,11 +16,12 @@ const Game = () => {
   const [isMenu, setMenu] = useState(false);
   const [idAnswers, setIdAnswers] = useState([]);
   const [curentAnswer, setCurentAnswer] = useState("");
-
+  const [showChartAnswer, setCahrtAnswer] = useState(false);
   let history = useHistory();
 
   const { setWinPrice } = useContext(priceContext);
-  console.log(window);
+  
+  
 
   const [size, setSize] = useState(0);
   useLayoutEffect(() => {
@@ -31,21 +33,18 @@ const Game = () => {
     return () => window.removeEventListener("resize", updateSize);
   }, []);
 
-
   useEffect(() => {
-    console.log(size);
     if (size < 768) {
       setIslaptop(false);
       setIsMobile(true);
     } else if (size > 767 && size < 1023) {
-      setIsMobile(false);
+      setIsMobile(true);
       setIslaptop(false);
     } else {
       setIsMobile(false);
       setIslaptop(true);
     }
   }, [size]);
-  console.log(isLaptop);
 
   useEffect(() => {
     if (curentAnswer === question.rigth_answer) {
@@ -57,7 +56,6 @@ const Game = () => {
         } else {
           setCurentQuestion((prev) => prev + 1);
         }
-        console.log(curentQuestion);
       }, 1000);
     } else if (curentAnswer !== "") {
       setTimeout(() => {
@@ -76,7 +74,16 @@ const Game = () => {
       setMenu(!isMenu);
     }
   };
-
+const onHandleGroupeHelp = (e) => {
+  console.log(e.target);
+  setCahrtAnswer(true);
+  // setTimeout(()=>{
+  //   setCahrtAnswer(false)
+  // },5000)
+};
+const onHandleHalf = (e) => {
+  console.log(e.target)
+}
   // get right answer
   const getRightAnswer = (e) => {
     const li = e.target.closest("li");
@@ -85,6 +92,7 @@ const Game = () => {
 
   return (
     <>
+      {showChartAnswer && <ChartAnswer answers={question.answers}/>}
       {!isMenu ? (
         <div className="container">
           <div className="game-page ">
@@ -125,12 +133,25 @@ const Game = () => {
                 ))}
               </ul>
             </div>
-            {isLaptop && <Gain data={idAnswers} />}
+            {isLaptop && (
+              <Gain
+                data={idAnswers}
+                isMobile={isMobile}
+                onhandleGroupeHelp={onHandleGroupeHelp}
+                onHandleHalf={onHandleHalf}
+              />
+            )}
           </div>
         </div>
       ) : (
         <div className="block-menu-game">
-          <Gain data={idAnswers} isMobile={isMobile} togleMenu={togleMenu} />
+          <Gain
+            data={idAnswers}
+            isMobile={isMobile}
+            togleMenu={togleMenu}
+            onhandleGroupeHelp={onHandleGroupeHelp}
+            onHandleHalf={onHandleHalf}
+          />
         </div>
       )}
     </>
