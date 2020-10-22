@@ -33,6 +33,9 @@ if (numA + numB < 400) {
 console.log(numA, numB, numC, numD);
 
 const ChartAnswer = ({ answers }) => {
+  useEffect(() => {
+    window.addEventListener("click", ()=>console.log("aaa"))
+  }, []);
   const data = [
     { name: answers[0].variant, uv: numA, pv: 2400, amt: 2400 },
     { name: answers[1].variant, uv: numB, pv: 2400, amt: 2400 },
@@ -62,7 +65,7 @@ const ChartAnswer = ({ answers }) => {
 };
 
 const CustomToolTip = ({ active, label, answers }) => {
-  useEffect(() => {}, [active]);
+  
   const getIntroOfPage = (label) => {
     if (label === answers[0].variant) {
       return `A: ${answers[0].answer_text}`;
