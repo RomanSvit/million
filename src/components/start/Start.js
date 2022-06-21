@@ -15,7 +15,7 @@ const Start = () => {
           <img src="/image/logo.png" alt="img" />
         </div>
         <div className="block-begin">
-          <h1 className="block-begin__title">Who wants to be a millionaire?</h1>
+          <h1 className="block-begin__title">Who wants to be a millionaire?</h1>
           <button
             className="block-begin__btn"
             type="button"
