@@ -2,13 +2,14 @@
 import React, { useEffect, useState, useContext, useLayoutEffect } from "react";
 import Gain from "../gain/Gain";
 import "./Game.css";
-import listQuestions from "../../data.json";
+import data from "../../data.json";
 import shortid from "shortid";
 import { priceContext } from "../../context/context";
 import { useHistory } from "react-router-dom";
 import ChartAnswer from "../chartAnswer/ChartAnswer";
 
 const Game = () => {
+  let listQuestions = JSON.parse(JSON.stringify(data));
   const [curentQuestion, setCurentQuestion] = useState(0);
   const [question, setQuestion] = useState(listQuestions[curentQuestion]);
   const [isMobile, setIsMobile] = useState(false);
@@ -17,11 +18,11 @@ const Game = () => {
   const [idAnswers, setIdAnswers] = useState([]);
   const [curentAnswer, setCurentAnswer] = useState("");
   const [showChartAnswer, setCahrtAnswer] = useState(false);
+  const [isCompleted, setCompleted] = useState(false);
+  const [isCompletedРHalf, setCompletedHalf] = useState(false);
   let history = useHistory();
 
   const { setWinPrice } = useContext(priceContext);
-  
-  
 
   const [size, setSize] = useState(0);
   useLayoutEffect(() => {
@@ -74,17 +75,39 @@ const Game = () => {
       setMenu(!isMenu);
     }
   };
-const onHandleGroupeHelp = (e) => {
-  console.log(e.target);
-  setCahrtAnswer(true);
-  // setTimeout(()=>{
-  //   setCahrtAnswer(false)
-  // },5000)
-};
-const onHandleHalf = (e) => {
-  console.log(e.target)
-}
-  // get right answer
+
+  const onHandleGroupeHelp = (e) => {
+    setCahrtAnswer(true);
+  };
+  const closeModalChart = (e) => {
+    if (e.target.className === "backdrop") {
+      setCahrtAnswer(false);
+      setCompleted(true);
+    }
+  };
+
+  const onHandleHalf = (e) => {
+    setCompletedHalf(true);
+    clearQuestion();
+    clearQuestion();
+  };
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+  const clearQuestion = () => {
+    let rightAnswer = question.rigth_answer;
+    let first = getRandomInt(0, 4);
+    if (
+      question.answers[first].variant === rightAnswer ||
+      question.answers[first].answer_text === ""
+    ) {
+      clearQuestion();
+      return;
+    }
+    question.answers[first].answer_text = "";
+  };
   const getRightAnswer = (e) => {
     const li = e.target.closest("li");
     setCurentAnswer(li.querySelector("p span").innerHTML);
@@ -92,7 +115,9 @@ const onHandleHalf = (e) => {
 
   return (
     <>
-      {showChartAnswer && <ChartAnswer answers={question.answers}/>}
+      {showChartAnswer && (
+        <ChartAnswer answers={question.answers} onClick={closeModalChart} />
+      )}
       {!isMenu ? (
         <div className="container">
           <div className="game-page ">
@@ -139,6 +164,9 @@ const onHandleHalf = (e) => {
                 isMobile={isMobile}
                 onhandleGroupeHelp={onHandleGroupeHelp}
                 onHandleHalf={onHandleHalf}
+                showChartAnswer={showChartAnswer}
+                isCompleted={isCompleted}
+                isCompletedРHalf={isCompletedРHalf}
               />
             )}
           </div>
@@ -151,6 +179,9 @@ const onHandleHalf = (e) => {
             togleMenu={togleMenu}
             onhandleGroupeHelp={onHandleGroupeHelp}
             onHandleHalf={onHandleHalf}
+            showChartAnswer={showChartAnswer}
+            isCompleted={isCompleted}
+            isCompletedРHalf={isCompletedРHalf}
           />
         </div>
       )}

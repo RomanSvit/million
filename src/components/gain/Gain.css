@@ -135,8 +135,16 @@ span {
 }
 @media (min-width: 1440px) {
   .block-gain {
+    height: 700px;
+    justify-content: center;
     width: 500px;
     margin: 0 auto;
     opacity: 1;
+  }
+  .gain{
+    margin-bottom: 50px;
+  }
+  .gain-item{
+    margin-bottom: 10px;
   }
 }

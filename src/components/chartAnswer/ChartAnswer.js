@@ -30,12 +30,12 @@ if (numA + numB < 400) {
   numD = 0;
 }
 
-console.log(numA, numB, numC, numD);
-
-const ChartAnswer = ({ answers }) => {
+const ChartAnswer = ({ answers, onClick }) => {
   useEffect(() => {
-    window.addEventListener("click", ()=>console.log("aaa"))
-  }, []);
+    window.addEventListener("click", onClick);
+    return () => window.removeEventListener("click", onClick);
+  });
+
   const data = [
     { name: answers[0].variant, uv: numA, pv: 2400, amt: 2400 },
     { name: answers[1].variant, uv: numB, pv: 2400, amt: 2400 },

@@ -4,7 +4,13 @@ import data from "../../data.json";
 import HelpButton from "../helpButton/HelpButton";
 
 const Gain = (props) => {
-const { onhandleGroupeHelp, onHandleHalf } = props;
+const {
+  onhandleGroupeHelp,
+  onHandleHalf,
+  showChartAnswer,
+  isCompleted,
+  isCompletedРHalf,
+} = props;
 // console.log(props);
   const arr = [...[], ...data];
   return (
@@ -39,6 +45,9 @@ const { onhandleGroupeHelp, onHandleHalf } = props;
         <HelpButton
           onHandleGroupeHelp={onhandleGroupeHelp}
           onHandleHalf={onHandleHalf}
+          showChartAnswer={showChartAnswer}
+          isCompleted={isCompleted}
+          isCompletedРHalf={isCompletedРHalf}
         />
       </div>
     </div>

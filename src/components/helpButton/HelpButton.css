@@ -1,48 +1,59 @@
-.block-button{
-    padding: 20px 10px;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
+.block-button {
+  padding: 20px 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
-.btn{
-    background: transparent;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
+.btn-remove {
+  background: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
-.btn-half{
-    width: 106px;
-    height: 65px;
-    background-image: url(/image/50-50.png);
+.btn {
+  background: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
-.btn:hover{
-    transform: scale(1.2);
+
+.btn-half {
+  width: 106px;
+  height: 65px;
+  background-image: url(/image/50-50.png);
 }
-.completed.btn::after,
-.completed.btn::before{
-    content: '';
-    display: block;
-    background: red;
-    width: 96px;
-    height: 5px;
-    position: absolute;
+.btn:hover {
+  transform: scale(1.2);
 }
-.completed.btn::after{
-    bottom: 28px;
-    transform: rotateZ(15deg);
-    left: 4px;
+.completed.btn-remove::after,
+.completed.btn-remove::before {
+  content: "";
+  display: block;
+  background: red;
+  width: 96px;
+  height: 5px;
+  position: absolute;
 }
-.completed.btn::before{
-    bottom: 28px;
-    transform: rotateZ(-15deg);
-    right: 4px;
+.completed.btn-remove::after {
+  bottom: 28px;
+  transform: rotateZ(15deg);
+  left: 4px;
 }
-.btn-helpGroup{
-    width: 103px;
-    height: 65px;
-    background-image: url(/image/help_group.png);
+.completed.btn-remove::before {
+  bottom: 28px;
+  transform: rotateZ(-15deg);
+  right: 4px;
 }
-@media (min-width: 800px){}
-@media (min-width: 1024px) {}
-@media (min-width: 1440px) {}
+.btn-helpGroup {
+  width: 103px;
+  height: 65px;
+  background-image: url(/image/help_group.png);
+}
+@media (min-width: 800px) {
+}
+@media (min-width: 1024px) {
+}
+@media (min-width: 1440px) {
+}
